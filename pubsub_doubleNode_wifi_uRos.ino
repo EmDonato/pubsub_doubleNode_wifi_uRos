@@ -71,14 +71,14 @@ void setup() {
   RCCHECK(rclc_node_init_default(&node_sub, "micro_ros_esp32_node_sub", "", &support));
 
   // Create publisher
-  RCCHECK(rclc_publisher_init_default(
+  RCCHECK(rclc_publisher_init_best_effort(
     &publisher,
     &node_pub,
     ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32),
     "micro_ros_pub_topic"));
 
   // Create subscriber
-  RCCHECK(rclc_subscription_init_default(
+  RCCHECK(rclc_subscription_init_best_effort(
     &subscriber,
     &node_sub,
     ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32),
