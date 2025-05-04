@@ -2,6 +2,9 @@
 
 This firmware demonstrates a simple publisher and subscriber communication setup using micro-ROS on the ESP32. The ESP32 will publish an integer value incrementing every second and subscribe to a topic to receive integer messages.
 
+
+The ROS2 program (Server side) is maintained in a separate repository.  [EmDonato/pubsub_doubleNode_template_wifi_ROS2](https://github.com/EmDonato/pubsub_doubleNode_template_wifi_ROS2.git)
+
 ## Features
 - **Publisher**: Sends an incrementing integer (`Int32`) message every second.
 - **Subscriber**: Receives `Int32` messages and prints the value to the serial monitor.
